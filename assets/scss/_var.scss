@@ -1,0 +1,49 @@
+$font-family: 'IBM Plex Sans Arabic';
+$font-size: 16px;
+
+
+@mixin transi($property, $time) {
+  -webkit-transition: $property $time;
+  -moz-transition: $property $time;
+  -ms-transition: $property $time;
+  -o-transition: $property $time;
+  transition: $property $time;
+}
+
+$white:#FFFFFF;
+$black:#000000;
+$base-black:#161616;
+
+$green-800:#085D3A;
+$green-200:#ABEFC6;
+$green-50:#ECFDF3; 
+
+
+
+$red-800:#912018;
+$red-700:#B42318;
+$red-600:#D92D20;
+$red-50:#FEF3F2;
+
+$blue-800:#1849A9;
+$blue-700:#175CD3;
+$blue-200:#B2DDFF;
+$blue-50:#EFF8FF;
+
+
+$neutral-800:#1F2A37;
+$neutral-700:#384250;
+$neutral-500:#6C737F;
+$neutral-400:#FCFCFD;
+$neutral-300:#D2D6DB;
+$neutral-200:#E5E7EB;
+$neutral-100:#F3F4F6;
+$neutral-50:#F9FAFB;
+
+
+$yellow-800:#93370D;
+$yellow-700:#B54708;
+$yellow-600:#DC6803;
+$yellow-50:#FFFAEB;
+
+

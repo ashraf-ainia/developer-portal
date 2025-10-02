@@ -1,0 +1,213 @@
+.information-container,
+.swagger-ui .scheme-container {
+  display: none;
+}
+.scheme-container {
+  border: none;
+  box-shadow: none !important;
+}
+
+.swagger-ui {
+  direction: ltr;
+  .wrapper {
+    padding: 0 !important;
+  }
+  .schemes.wrapper {
+    display: none !important;
+  }
+
+  .opblock-tag-section {
+    border-radius: 16px;
+    background-color: #000;
+    padding: 24px;
+  }
+  .opblock-tag {
+    color: #fff !important;
+  }
+  .opblock-summary-path {
+    color: #fff !important;
+  }
+  .opblock-summary-description {
+    display: none;
+  }
+
+  .opblock {
+    padding: 24px;
+
+    &.opblock-get,
+    &.opblock-post,
+    &.opblock-put,
+    &.opblock-delete,
+    &.opblock-options,
+    &.opblock-patch {
+      border-radius: 16px;
+      border-color: #161616 !important;
+      background-color: #161616 !important;
+
+      .opblock-summary-method {
+        border-radius: 4px !important;
+        border: 1px solid #abefc6 !important;
+        background: #ecfdf3 !important;
+        color: #085d3a;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+    .opblock-summary {
+      border-color: transparent !important;
+    }
+
+    .opblock-section-header {
+      margin-top: 16px;
+      border-radius: 16px !important;
+      background: #1f2a37 !important;
+      padding: 32px !important;
+
+      .opblock-title {
+        color: #fff !important;
+        font-size: 16px !important;
+
+        span {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .try-out {
+        button {
+          display: flex;
+          min-width: 180px;
+          min-height: 40px;
+          padding: 0 16px;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          border-radius: 6px;
+          background: #fff;
+          border: none !important;
+        }
+      }
+    }
+
+    .parameters-container {
+      th,
+      td {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .parameter__name,
+  .parameter__type,
+  .parameter__in {
+    color: #fff !important;
+
+    &.required {
+      span {
+        color: red !important;
+      }
+      &::after {
+        color: red !important;
+      }
+    }
+  }
+
+  .unlocked,
+  .locked {
+    opacity: 1 !important;
+    stroke: #fff;
+    margin-inline-end: 16px;
+  }
+
+  .arrow {
+    fill: #fff;
+  }
+
+  table thead tr th,
+  table thead tr td {
+    color: #fff !important;
+  }
+
+  .opblock-summary-control:focus {
+    outline: none !important;
+  }
+
+  h4,
+  .response,
+  .response-col_status,
+  .response-col_links,
+  .model-title,
+  .brace-open,
+  .property-row {
+    color: #fff !important;
+  }
+
+  input {
+    color: #000 !important;
+  }
+
+  .models {
+    background-color: #000 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+
+    &.is-open h4 {
+      border-bottom: none !important;
+    }
+
+    svg {
+      fill: #fff !important;
+    }
+
+    .models-control {
+      &:focus {
+        outline: none !important;
+      }
+    }
+
+    span {
+      color: #fff !important;
+    }
+  }
+
+  .model-toggle {
+    transform: rotate(360deg) !important;
+    &.collapsed {
+      color: #fff !important;
+      transform: rotate(270deg) !important;
+    }
+
+    &:after {
+      background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none"><path d="M2.0031 1.1294C2.10467 1.26388 2.40793 1.66534 2.58853 1.89676C2.95026 2.36027 3.44452 2.97618 3.97769 3.59026C4.51356 4.20744 5.07648 4.80852 5.57658 5.25039C5.82734 5.47195 6.04762 5.64031 6.22939 5.74989C6.40035 5.85296 6.50134 5.87439 6.50134 5.87439C6.50134 5.87439 6.59936 5.85295 6.77031 5.7499C6.95209 5.64032 7.17237 5.47196 7.42313 5.25039C7.92322 4.80852 8.48615 4.20744 9.02201 3.59025C9.55518 2.97616 10.0494 2.36025 10.4112 1.89673C10.5918 1.66531 10.8946 1.26442 10.9962 1.12994C11.2009 0.852004 11.5925 0.792058 11.8705 0.996751C12.1484 1.20145 12.2078 1.59269 12.0031 1.87063L12.0015 1.87273C11.895 2.01376 11.5809 2.42963 11.3966 2.66577C11.0267 3.13975 10.518 3.77384 9.96589 4.40976C9.41646 5.04257 8.81173 5.69149 8.2508 6.18712C7.97105 6.4343 7.68747 6.65656 7.41567 6.82042C7.16102 6.97393 6.83861 7.125 6.49985 7.125C6.16109 7.125 5.83868 6.97393 5.58404 6.82041C5.31223 6.65656 5.02866 6.4343 4.74891 6.18712C4.18798 5.69149 3.58325 5.04258 3.03382 4.40977C2.48169 3.77386 1.973 3.13978 1.6031 2.6658C1.41871 2.42953 1.10464 2.01371 0.9983 1.87292L0.9969 1.87107C0.792204 1.59313 0.851284 1.20149 1.12922 0.996793C1.40714 0.792105 1.7984 0.851493 2.0031 1.1294Z" fill="white"/></svg>')
+        50% no-repeat !important;
+    }
+  }
+
+  section.models .model-container {
+    border-radius: 16px;
+    border-color: #161616 !important;
+    background-color: #161616 !important;
+  }
+
+  .authorization__btn {
+        padding-inline-end: 10px;
+    &::before {
+      content: "";
+      display: inline-flex;
+      background-image: url("../images/lock.svg");
+      background-repeat: no-repeat;
+      width: 14.583px;
+      height: 17.917px;
+      opacity: 1 !important;
+    }
+  }
+
+  .unlocked {
+    opacity: 0 !important;
+    display: none;
+  }
+
+
+}
