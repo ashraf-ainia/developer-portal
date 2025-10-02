@@ -1,0 +1,319 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "_IBM_Brokerage",
+    "version": "1.0.0",
+    "description": "API documentation generated from the Postman collection."
+  },
+  "servers": [
+    {
+      "url": "https://test-brokerage.housingapps.sa",
+      "variables": {
+        "BaseURL": {
+          "default": "https://api.example.com",
+          "description": "The base URL for the API endpoints"
+        }
+      }
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "ibmClientAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-IBM-Client-Id",
+        "description": "Client ID for IBM API Connect authentication (Postman variable: {{ClientId}})"
+      },
+      "ibmClientSecret": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-IBM-Client-Secret",
+        "description": "Client Secret for IBM API Connect authentication (Postman variable: {{ClientSecret}})"
+      }
+    },
+    "schemas": {
+      "GetBrokerLicensesInformationBody": {
+        "type": "object",
+        "properties": {
+          "brokerType": {
+            "type": "string",
+            "example": "Establishment"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 7042670237
+          }
+        }
+      },
+      "AdvertiseBody": {
+        "type": "object",
+        "properties": {
+          "platformOwnerId": {
+            "type": "string",
+            "example": "7007918084"
+          },
+          "platformId": {
+            "type": "string",
+            "format": "uuid",
+            "example": "08db891b-fae9-4216-8a53-325cc1e27a11"
+          },
+          "advertiserType": {
+            "type": "string",
+            "example": "BrokerIndividual"
+          },
+          "advertiserId": {
+            "type": "string",
+            "example": "1007729252"
+          },
+          "advertiserName": {
+            "type": "string",
+            "example": "string"
+          },
+          "userIdNumber": {
+            "type": "string",
+            "example": "1007729252"
+          },
+          "advertiserMobileNumber": {
+            "type": "string",
+            "example": "0554554888"
+          },
+          "attorneyCode": {
+            "type": "integer",
+            "example": 40985145
+          },
+          "brokerageContractNumber": {
+            "type": "string",
+            "example": "6100000197"
+          },
+          "deedNumber": {
+            "type": "string",
+            "example": "112255122"
+          },
+          "deedSerialNumber": {
+            "type": ["string", "null"],
+            "nullable": true,
+            "example": null
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": ["LicensedPlatform"]
+          },
+          "adPhotos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": ["08dc14df-3e53-4e01-82b3-07b1e644d66b"]
+          },
+          "propertyPrice": {
+            "type": "number",
+            "format": "float",
+            "example": 100.0
+          },
+          "advertisementType": {
+            "type": "string",
+            "example": "Rent"
+          },
+          "propertyFace": {
+            "type": "string",
+            "example": "string"
+          },
+          "disclaimer": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "ibmClientAuth": []
+    },
+    {
+      "ibmClientSecret": []
+    }
+  ],
+  "paths": {
+    "/v2/brokerage/AdvertisementValidator": {
+      "get": {
+        "summary": "brokerage/AdvertisementValidator",
+        "operationId": "AdvertisementValidator",
+        "parameters": [
+          {
+            "name": "adLicenseNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "7100000031"
+          },
+          {
+            "name": "advertiserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1034758704"
+          },
+          {
+            "name": "idType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "RefId",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/v1/brokerage/GetBrokerLicensesInformation": {
+      "post": {
+        "summary": "brokerage/GetBrokerLicensesInformation",
+        "operationId": "GetBrokerLicensesInformation",
+        "parameters": [
+          {
+            "name": "RefId",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "456"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetBrokerLicensesInformationBody"
+              },
+              "example": {
+                "brokerType": "Establishment",
+                "id": 7042670237
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/v2/brokerage/CreateADLicense": {
+      "post": {
+        "summary": "brokerage/Advertise",
+        "operationId": "Advertise",
+        "parameters": [
+          {
+            "name": "RefId",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdvertiseBody"
+              },
+              "example": {
+                "platformOwnerId": "7007918084",
+                "platformId": "08db891b-fae9-4216-8a53-325cc1e27a11",
+                "advertiserType": "BrokerIndividual",
+                "advertiserId": "1007729252",
+                "advertiserName": "string",
+                "userIdNumber": "1007729252",
+                "advertiserMobileNumber": "0554554888",
+                "attorneyCode": 40985145,
+                "brokerageContractNumber": "6100000197",
+                "deedNumber": "112255122",
+                "deedSerialNumber": null,
+                "channels": ["LicensedPlatform"],
+                "adPhotos": ["08dc14df-3e53-4e01-82b3-07b1e644d66b"],
+                "propertyPrice": 100.0,
+                "advertisementType": "Rent",
+                "propertyFace": "string",
+                "disclaimer": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/v1/brokerage/ContractInquiry": {
+      "get": {
+        "summary": "brokerage/ContractInquiry",
+        "operationId": "ContractInquiry",
+        "parameters": [
+          {
+            "name": "contractNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "6200000026"
+          },
+          {
+            "name": "realEstateNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "830115008350"
+          },
+          {
+            "name": "RefId",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  }
+}
