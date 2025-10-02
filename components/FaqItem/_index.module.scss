@@ -1,0 +1,36 @@
+.itemFaq {
+  font-size: 16px;
+  border-bottom: 1px solid #fff;
+  padding: 16px;
+  .titleFaq {
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    .icon{
+      background: url("../../assets/images/arrow-w.svg") no-repeat;
+      background-size: contain;
+      width: 16px;
+      height: 12px;
+      transform: rotate(270deg);
+    }
+    .iconOPen{
+        transform: rotate(90deg);
+    }
+  }
+
+  .descFaq {
+    font-weight: 400;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+    padding: 0;
+  }
+
+  .descFaq.open {
+    max-height: 500px;
+    opacity: 1;
+    padding: 10px 0;
+  }
+}

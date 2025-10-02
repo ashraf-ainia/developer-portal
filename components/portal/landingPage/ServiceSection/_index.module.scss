@@ -1,0 +1,42 @@
+.service {
+  background: linear-gradient(180deg, #000 0%, #1e1e1e 50%, #000 95.67%);
+  padding: 80px 0;
+  .containerServics {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .blockServices {
+    width: auto;
+    white-space: nowrap;
+    gap: 24px;
+    margin: 64px 0;
+    margin-inline-start: 60px;
+  }
+  .linkMore {
+    text-align: end;
+    a {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 6px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+
+      &::after {
+        content: "";
+        display: block;
+        background: url("../../../../assets/images/arrow-w.svg");
+        width: 7.5px;
+        height: 13.5px;
+        margin-inline-start: 16px;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}

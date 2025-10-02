@@ -1,0 +1,43 @@
+.header {
+  background: #00000099;
+  position: relative;
+  z-index: 2;
+}
+.containerHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  .logoBlock {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+  }
+  .mainMenu {
+    ul {
+      display: flex;
+      gap: 24px;
+
+      li {
+        a {
+          color: #fff;
+          font-size: 14px;
+          &:active {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    a {
+      display: flex;
+    }
+  }
+}

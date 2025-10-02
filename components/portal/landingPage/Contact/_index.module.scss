@@ -1,0 +1,20 @@
+.sectionContact {
+  padding: 80px 0;
+  background: linear-gradient(179deg, #000 -0.28%, #1e1e1e 45.68%, #000 93.37%);
+
+  .titleBlockSection {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .blockContact {
+    display: flex;
+    gap: 80px;
+    .faqBlock {
+      width: 60%;
+    }
+    .supportBlock {
+      width: 40%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.itemAdv {
+  width: 260px;
+
+  .iconAdv {
+    border-radius: 9999.001px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    width: 56px;
+    height: 56px;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .titleAdv {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .descAdv {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 203px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}

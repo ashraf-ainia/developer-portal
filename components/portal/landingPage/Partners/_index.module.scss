@@ -1,0 +1,9 @@
+.sectionPart {
+  padding: 80px 0;
+  .Partners {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 30px;
+  }
+}
